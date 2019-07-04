@@ -1,0 +1,4 @@
+{
+    //converter o código ES6 para o ambiente desejado(nevegador, mobile, etc.)
+    "presets": ["@babel/preset-env"]
+}

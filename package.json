@@ -1,0 +1,19 @@
+{
+  "name": "Curso-JavaScript-ES6",
+  "version": "1.0.0",
+  "description": "Aprendendo um pouco de desenvelvimento web.",
+  "main": "index.js",
+  "repository": "https://github.com/xXHachimanXx/Curso-JavaScript-ES6.git",
+  "author": "xXHachimanXx",
+  "license": "MIT",
+  "dependencies": 
+  {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0"
+  },
+  "scripts": 
+  {
+    "dev": "babel ./main.js -o ./bundle.js -w"
+  }
+}
