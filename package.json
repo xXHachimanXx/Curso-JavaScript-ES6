@@ -14,6 +14,6 @@
   },
   "scripts": 
   {
-    "dev": "babel ./Lets_and_consts/js/main.js -o ./Lets_and_consts/js/bundle.js -w"
+    "dev": "babel ./Arrays/js/main.js -o ./Arrays/js/bundle.js -w"
   }
 }
