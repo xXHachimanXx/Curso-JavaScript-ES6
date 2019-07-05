@@ -14,6 +14,6 @@
   },
   "scripts": 
   {
-    "dev": "babel ./Arrays/js/main.js -o ./Arrays/js/bundle.js -w"
+    "dev": "babel ./Arrow_Functions/js/main.js -o ./Arrow_Functions/js/bundle.js -w"
   }
 }
