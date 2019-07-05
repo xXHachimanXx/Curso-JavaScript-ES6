@@ -14,6 +14,6 @@
   },
   "scripts": 
   {
-    "dev": "babel ./Arrow_Functions/js/main.js -o ./Arrow_Functions/js/bundle.js -w"
+    "dev": "babel ./Desestruturação/js/main.js -o ./Desestruturação/js/bundle.js -w"
   }
 }
