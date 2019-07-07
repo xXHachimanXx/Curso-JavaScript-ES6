@@ -6,14 +6,13 @@
   "repository": "https://github.com/xXHachimanXx/Curso-JavaScript-ES6.git",
   "author": "xXHachimanXx",
   "license": "MIT",
-  "dependencies": 
-  {
+  "dependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.1",
     "@babel/preset-env": "^7.5.0"
   },
-  "scripts": 
-  {
-    "dev": "babel ./Desestruturação/js/main.js -o ./Desestruturação/js/bundle.js -w"
+  "scripts": {
+    "dev": "babel ./Rest_and_Spread/js/main.js -o ./Rest_and_Spread/js/bundle.js -w"
   }
 }
