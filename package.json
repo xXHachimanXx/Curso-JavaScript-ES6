@@ -13,6 +13,6 @@
     "@babel/preset-env": "^7.5.0"
   },
   "scripts": {
-    "dev": "babel ./Desafios_1/Q3/js/main.js -o ./Desafios_1/Q3/js/bundle.js -w"
+    "dev": "babel ./Desafios_1/Q4/js/main.js -o ./Desafios_1/Q4/js/bundle.js -w"
   }
 }
