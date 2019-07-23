@@ -1,8 +1,11 @@
 module.exports = {
-    entry: "./Unidade2/main.js", //qualarquivo de entrada(ou principal)
+    entry: "./Unidade2/src/main.js", //qual arquivo de entrada(ou principal)
     output: {
-        path: __dirname, //diretório raiz deste arquivo,
+        path: __dirname + "/public", //diretório onde o bundle será gerado,
         filename: "bundle.js", //nome do arquivo destino
+    },
+    devServer: {
+        contentBase: __dirname + "/Unidade2/public", //diretório onde o server será gerado
     },
     module: {
         rules: [
