@@ -86,27 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./Unidade2/Configurando_webpack/functions.js":
-/*!****************************************************!*\
-  !*** ./Unidade2/Configurando_webpack/functions.js ***!
-  \****************************************************/
-/*! exports provided: soma */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./Unidade2/Configurando_webpack/functions.js?");
-
-/***/ }),
-
 /***/ "./Unidade2/main.js":
 /*!**************************!*\
   !*** ./Unidade2/main.js ***!
   \**************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Configurando_webpack_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Configurando_webpack/functions */ \"./Unidade2/Configurando_webpack/functions.js\");\n\nconsole.log(Object(_Configurando_webpack_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 3));\n\n//# sourceURL=webpack:///./Unidade2/main.js?");
+eval("//import {soma, sub} from \"./import_and_export/functions\"\n//import {Functions} from \"./import_and_export/functions\"\n\n/*\r\nimport {Contato} from \"./import_and_export/functions\"\r\n\r\nconst x = new Contato();\r\nx.setData(\"Felipe\", 55555555);\r\nconsole.log(x.toString());  \r\n*/\nvar btnElement = document.getElementById(\"btn\");\nvar btnElement2 = document.getElementById(\"voltar\");\nvar isRendered = true;\n\nfunction show() {\n  if (isRendered) {\n    var textElement = document.createTextNode(\"que vc tenha ki suficiente para aguentar o resto da semana kkk\");\n    var para = document.createElement('p');\n    para.appendChild(textElement);\n    document.body.appendChild(para);\n    var textElement2 = document.createTextNode(\"bom dia e bom trabalho meu consagrado!!!\");\n\n    var _para = document.createElement('h3');\n\n    _para.appendChild(textElement2);\n\n    document.body.appendChild(_para);\n    isRendered = false;\n  } else {\n    //para.remove();\n    para2.remove();\n    isRendered = false;\n  }\n}\n\nbtnElement.onclick = show;\n\n//# sourceURL=webpack:///./Unidade2/main.js?");
 
 /***/ })
 

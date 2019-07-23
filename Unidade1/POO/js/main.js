@@ -21,10 +21,10 @@ class TodoList extends List
         this.user = "Felipe";
     }
 
-    showUser()
-    {        
+    showUser(){
         
     }
+
 }// end class TodoList
 
 const MinhaLista = new TodoList();
