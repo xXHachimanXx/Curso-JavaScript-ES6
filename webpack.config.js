@@ -1,5 +1,5 @@
 module.exports = {
-    entry: ["@babel/polyfill", "./Unidade3/src/axiosTests.js"], //qual arquivo de entrada(ou principal)
+    entry: ["@babel/polyfill", "./Unidade3/src/desafios3.js"], //qual arquivo de entrada(ou principal)
     output: {
         path: __dirname + "/public", //diretório onde o bundle será gerado,
         filename: "bundle.js", //nome do arquivo destino
