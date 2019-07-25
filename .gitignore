@@ -61,4 +61,4 @@ typings/
 .next
 
 # ignorar imagens
-*.jpg
+/images
