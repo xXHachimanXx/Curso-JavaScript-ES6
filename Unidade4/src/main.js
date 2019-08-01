@@ -1,3 +1,5 @@
+import api from "./api";
+
 class App
 {
     constructor()
@@ -5,6 +7,7 @@ class App
         this.repositories = [];
         this.formEl = document.getElementById("repo-form");
         this.listEl = document.getElementById("repo-list");               
+        this.inputEl = document.querySelector("input[name=repository]");
         this.registerHandlers();        
     }//end constructor()
 
@@ -24,17 +27,27 @@ class App
      * 
      * @param {Event} event 
      */
-    addRepository(event)
+    async addRepository(event)
     {               
         event.preventDefault();
-        this.repositories.push({
-            name: "rocketseat.com.br",
-            description: "Tire a sua ideia do papel.",
-            avatar_url: "https://avatars0.githubusercontent.com/u/28929274?v=4",
-            html_url: "https://github.com/rocketseat/docs",
+
+        const inputValue = this.inputEl.value;
+        this.inputEl.value = "";
+
+        if(inputValue === 0)
+        { return; }
+
+        const response = await api.get(`/repos/${inputValue}`);
+        const { name, description, html_url, avatar_url} = response.data;          
+
+        this.repositories.push({ 
+            name, 
+            description, 
+            html_url, 
+            avatar_url: response.data.owner.avatar_url
         });
-        this.render();
-        console.log(this.repositories);        
+
+        this.render();                
     }
 
     /**
@@ -75,6 +88,7 @@ class App
         //criar link
         let linkEl = document.createElement('a');
         linkEl.setAttribute("target", "_blank");
+        linkEl.setAttribute('href', repo.html_url);
         linkEl.appendChild(document.createTextNode("Acessar"));        
 
         listItemEl.appendChild(imgEl);
