@@ -22,6 +22,23 @@ class App
         };
     }
 
+    setLoading(loading = true)
+    {
+        if(loading)
+        {
+            let loadingEl = document.createElement("span");
+            loadingEl.setAttribute("id", "loadingEl");
+            loadingEl.appendChild(document.createTextNode("Carregando..."));
+
+            this.formEl.appendChild(loadingEl);
+        }
+        else
+        {
+            document.getElementById("loadingEl").remove();
+        }
+
+    }//end setLoading()
+
     /**
      * Método para adicionar repositório.
      * 
@@ -37,18 +54,29 @@ class App
         if(inputValue === 0)
         { return; }
 
-        const response = await api.get(`/repos/${inputValue}`);
-        const { name, description, html_url, avatar_url} = response.data;          
+        this.setLoading();
 
-        this.repositories.push({ 
-            name, 
-            description, 
-            html_url, 
-            avatar_url: response.data.owner.avatar_url
-        });
+        try
+        {
+            const response = await api.get(`/repos/${inputValue}`);
+            const { name, description, html_url, avatar_url} = response.data;          
 
-        this.render();                
-    }
+            this.repositories.push({ 
+                name, 
+                description, 
+                html_url, 
+                avatar_url: response.data.owner.avatar_url
+            });
+
+            this.render();
+        }
+        catch(erro)
+        {
+            alert("O repositório não exite!");
+        }//end try-catch 
+
+        this.setLoading(false);
+    }//end addRepository()
 
     /**
      * Métodor para renderizar em tela todos os elementos.
