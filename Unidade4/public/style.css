@@ -1,3 +1,35 @@
+
+h1{
+    color: rgb(12, 216, 243);
+    font-size: 300%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e6fcff;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 200%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    background-color: rgb(32, 111, 214); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+input[type=text] {
+  width: 50%;
+  padding: 15px 32px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 ul {
     list-style: none;
     margin: 0;
